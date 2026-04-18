@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFTV STUDIOS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="brand">DEFTV<span>STUDIOS</span></div>
+            <nav>
+                <a href="#tienda">TIENDA</a>
+                <a href="#comunidad">COMUNIDAD</a>
+                <a href="#arcade">ARCADE 3D</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BIENVENIDO A DEFTV STUDIOS</h1>
+            <p>COMPRA YA NUESTROS JUEGOS Y NO OLVIDES PROBAR NUESTRO MINIJUEGO</p>
+            <a href="#arcade" class="cta">IR AL MINIJUEGO</a>
+        </div>
+    </section>
+
+    <section id="tienda" class="seccion-juegos">
+        <h2 class="titulo">CATÁLOGO DISPONIBLE</h2>
+        <div class="grid-juegos">
+            <article class="tarjeta">
+                <img src="img/elden.jpg" alt="Elden Ring">
+                <div class="detalles">
+                    <h3>ELDEN RING</h3>
+                    <span class="precio">$39.99</span>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/gta.jpg" alt="GTA VI">
+                <div class="detalles">
+                    <h3>GTA VI</h3>
+                    <span class="precio">$69.99</span>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/cyberpunk.jpg" alt="Cyberpunk 2077">
+                <div class="detalles">
+                    <h3>CYBERPUNK</h3>
+                    <span class="precio">$49.99</span>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/halo.jpg" alt="Halo Infinite">
+                <div class="detalles">
+                    <h3>HALO INFINITE</h3>
+                    <span class="precio">$19.99</span>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/doom.jpg" alt="Doom The Dark Ages">
+                <div class="detalles">
+                    <h3>DOOM THE DARK AGES</h3>
+                    <span class="precio">$29.99</span>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/zelda.jpg" alt="Zelda Tears of the Kingdom">
+                <div class="detalles">
+                    <h3>ZELDA: TOTK</h3>
+                    <span class="precio">$59.99</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="comunidad" class="seccion-comunidad">
+        <h2 class="titulo">COMUNIDAD</h2>
+        <div class="feed">
+            <div class="post"><strong>@Dominic_Dev:</strong> Velocidad de pagina mejorada</div>
+            <div class="post"><strong>@juanito123:</strong> QUE INCREIBLES DESCUENTOS HAY AQUI</div>
+        </div>
+    </section>
+
+    <section id="arcade" class="arcade-container">
+        <div class="frame">
+            <div class="hud">ZOMBIES: <span id="puntos">0</span> / 15</div>
+            <div class="crosshair"></div>
+            <canvas id="render-3d" width="800" height="400"></canvas>
+            <div id="flash-disparo"></div>
+            <div id="pantalla-inicio">
+                <button id="boton-jugar">INICIAR PARTIDA</button>
+                <p>WASD: MOVER | F: DISPARAR</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>DISEÑO POR EDER DOMINIC</p>
+    </footer>
+
+    <script src="js/juego.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+:root {
+    --morado: #9d00ff;
+    --morado-claro: #f8f0ff;
+    --blanco: #ffffff;
+    --gris: #f0f2f5;
+    --negro: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--blanco);
+    color: var(--negro);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 3px solid var(--morado);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.brand { font-family: 'Orbitron'; font-size: 1.8rem; font-weight: 900; }
+.brand span { color: var(--morado); }
+
+nav a { color: var(--negro); text-decoration: none; margin-left: 25px; font-weight: 700; transition: 0.2s; }
+nav a:hover { color: var(--morado); }
+
+.hero {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.85)), url('https://picsum.photos/id/123/1200/800');
+    background-size: cover;
+    padding-top: 60px;
+}
+
+.hero h1 { font-family: 'Orbitron'; font-size: 3.5rem; color: var(--morado); margin: 0; }
+.hero p { max-width: 600px; font-size: 1.1rem; margin: 15px auto; }
+
+.cta {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--morado);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(157, 0, 255, 0.3);
+}
+
+.seccion-juegos { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+.titulo { text-align: center; font-family: 'Orbitron'; font-size: 2.2rem; margin-bottom: 40px; color: var(--morado); }
+
+.grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 12px; text-align: center; transition: 0.3s; }
+.tarjeta:hover { transform: translateY(-5px); border-color: var(--morado); }
+.tarjeta img { width: 100%; border-radius: 8px; }
+
+.seccion-comunidad { padding: 60px 20px; background: var(--gris); }
+.feed { max-width: 800px; margin: 0 auto; }
+.post { background: #fff; padding: 20px; margin-bottom: 10px; border-left: 6px solid var(--morado); border-radius: 5px; }
+
+.arcade-container { padding: 100px 20px; background: #fff; }
+.frame { max-width: 850px; margin: 0 auto; border: 5px solid var(--morado); position: relative; background: #000; overflow: hidden; border-radius: 10px; }
+#render-3d { width: 100%; display: block; }
+
+.hud { position: absolute; top: 15px; left: 15px; color: #fff; font-family: 'Orbitron'; font-weight: bold; z-index: 5; background: rgba(0,0,0,0.6); padding: 8px 15px; border-radius: 4px; }
+
+.crosshair {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 22px; height: 22px;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#flash-disparo {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: none;
+    z-index: 8;
+    pointer-events: none;
+}
+
+#pantalla-inicio {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(157, 0, 255, 0.95);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    z-index: 100;
+    color: #fff;
+}
+
+#boton-jugar {
+    background: #fff;
+    border: none;
+    padding: 18px 50px;
+    color: var(--morado);
+    font-family: 'Orbitron';
+    font-size: 1.6rem;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer { padding: 50px; text-align: center; background: var(--gris); color: #777; border-top: 1px solid #ddd; }
